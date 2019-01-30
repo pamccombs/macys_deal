@@ -1,3 +1,4 @@
+#CLI Controller
 class MacysDeal::CLI
 
   def call

@@ -1,6 +1,2 @@
-require "macys_deal/version"
-
-module MacysDeal
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative "./macys_deal/version"
+require_relative './macys_deal/cli'

@@ -2,5 +2,6 @@
 
 #puts "Hello World"
 
-require "./lib/macys_deal"
+require './lib/macys_deal'
+
 MacysDeal::CLI.new.call
