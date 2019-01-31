@@ -21,11 +21,15 @@ How to build a CLI gem
 
 user types macys_deal
 
-shows list of all current macy's deals
+shows list of all current macy's deals:
 
-- shows titles
-  1. Hosiery
-  2. Lingerie
+
+1. Super Weekend Sale - Extra 25%, 15% or 10% off! - Promo code: YAY
+
+2. Hosiery - 3 for $30 Hanes Perfect Nudes Sheers - No promo code
+
+3. Sports Fan Shop by LIDS - 40% off Markdowns - No promo code
+
 
 
 are you interested?
