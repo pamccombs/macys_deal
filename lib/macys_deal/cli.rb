@@ -43,10 +43,3 @@ class MacysDeal::CLI
     puts "Thank you for your support! Check daily for more deals!"
   end
 end
-
-  end
-
-  def goodbye
-    puts "Thank you for your support! Check daily for more deals!"
-  end
-end
