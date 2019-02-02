@@ -20,16 +20,19 @@ attr_accessor :name, :price, :promo, :url
   end
 
   def self.scrape_macys
-    doc = Nokogiri::HTML(open("https://www.macys.com/shop/coupons-deals?cm_sp=navigation-_-top_nav-_-deals&lid=glbtopnav_deals-us"))
-    name = doc.search("h2.promo-header-text").text
-    price = doc.search("h2.promo-sub-header-text").text
-    promo_t = doc.search("div.promo-code").text
-    promo_f = doc.search("div.no-promo-code").text
+    doc = Nokogiri::HTML(open("https://www.macys.com/shop/coupons-deals?cm_sp=navigation-_-top_nav-_-deals&lid=glbtopnav_deals-us")) do |config|
+      config.strict.noblanks
+    end
+    #name = doc.search("h2.promo-header-text").text
+    #price = doc.search("h2.promo-sub-header-text").text
+    #promo_t = doc.search("div.promo-code").text
+    #promo_f = doc.search("div.no-promo-code").text
     binding.pry
+
+
     #name = <h2 class="promo-header-text ">Super Weekend Sale!</h2>
 
-      #"Super Weekend Sale!HosieryLINGERIELINGERIELINGERIELINGERIEMaternityHOISERYLINGERIELINGERIESports Fan Shop by LIDSMEN'S SOCKSSports Fan Shop by LIDSRIEDELGourmet
-      #Food & GiftsHomeHomeHomeHomeHome"
+      #"Super Weekend Sale!HosieryLINGERIELINGERIELINGERIELINGERIEMaternityHOISERYLINGERIELINGERIESports Fan Shop by LIDSMEN'S SOCKSSports Fan Shop by LIDSRIEDELGourmetFood & GiftsHomeHomeHomeHomeHome"
 
     #price = <h2 class="promo-sub-header-text ">Extra 25%, 15% or 10% off!</h2>
 
