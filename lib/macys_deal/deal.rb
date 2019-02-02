@@ -30,7 +30,7 @@ attr_accessor :name, :price, :promo, :url
 
       #"Super Weekend Sale!HosieryLINGERIELINGERIELINGERIELINGERIEMaternityHOISERYLINGERIELINGERIESports Fan Shop by LIDSMEN'S SOCKSSports Fan Shop by LIDSRIEDELGourmet
       #Food & GiftsHomeHomeHomeHomeHome"
-      
+
     #price = <h2 class="promo-sub-header-text ">Extra 25%, 15% or 10% off!</h2>
 
       #"Extra 25%, 15% or 10% off!3 for $30 Hanes Perfect Nudes SheersFree INC flip flop with $50+ regular priced purchase of INC Lingerie, Pajamas, or HosieryFree Key
@@ -42,13 +42,13 @@ attr_accessor :name, :price, :promo, :url
     #promo (if true) = <div class="promo-code"> Promo code:  <span class="ispromo-code">YAY</span></div>
 
       #" Promo code:  YAY"
-    
+
     #promo (if false) = <div class="no-promo-code">No promo code</div>
 
       #"No promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo p
       #romo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo code"
 
-      
+
   end
 end
 
