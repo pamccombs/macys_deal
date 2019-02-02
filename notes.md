@@ -35,3 +35,14 @@ shows list of all current macy's deals:
 are you interested?
 
 - shows actual deal (price, etc.)
+
+
+deal.rb notes
+
+titles = doc.css('h2.promo-header-text').text
+
+titles = doc.search('h2.promo-header-text').map { |entry| entry.at('h2')}
+
+titles = doc.xpath('h2.promo-header-text').collect { |entry| entry.at('title')}
+
+correct --> title = doc.search('h2.promo-header-text').map(&:text)

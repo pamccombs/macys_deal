@@ -23,10 +23,10 @@ attr_accessor :name, :price, :promo, :url
     doc = Nokogiri::HTML(open("https://www.macys.com/shop/coupons-deals?cm_sp=navigation-_-top_nav-_-deals&lid=glbtopnav_deals-us")) do |config|
       config.strict.noblanks
     end
-    #name = doc.search("h2.promo-header-text").text
-    #price = doc.search("h2.promo-sub-header-text").text
-    #promo_t = doc.search("div.promo-code").text
-    #promo_f = doc.search("div.no-promo-code").text
+    #name = doc.search('h2.promo-header-text').map(&:text)
+    #price = doc.search('h2.promo-sub-header-text').map(&:text)
+    #promo_t = doc.search('div.promo-code').map(&:text)
+    #promo_f = doc.search('div.no-promo-code').map(&:text)
     binding.pry
 
 
