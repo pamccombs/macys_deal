@@ -46,3 +46,8 @@ titles = doc.search('h2.promo-header-text').map { |entry| entry.at('h2')}
 titles = doc.xpath('h2.promo-header-text').collect { |entry| entry.at('title')}
 
 correct --> title = doc.search('h2.promo-header-text').map(&:text)
+
+
+working --> url = doc.at('div.promo-footer').search('a').first.attr('href')
+
+better --> url = doc.search('div.promo-footer').search('a').map {|attrs| attrs.attr("href")}

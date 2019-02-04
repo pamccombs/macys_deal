@@ -51,6 +51,8 @@ attr_accessor :name, :price, :promo, :url
       #"No promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo p
       #romo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo codeNo promo code"
 
+    #url = <a href="http://www.macys.com?lid=shop_now" class="shop-link button expand" aria-label="Shop Now Applies to select merchandise." id="shop-now-link">Shop Now</a>
+
 
   end
 end
