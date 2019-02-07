@@ -15,9 +15,8 @@ class MacysDeal::CLI
 
     @deals = MacysDeal::Deal.today
     @deals.each.with_index(1) do |deal, i|
-      puts "#{i}. #{deal.name} - #{deal.price} - #{deal.promo}"
+      puts "#{i}. #{deal.name}"  #{deal.price} - #{deal.promo_t}"
     end
-
   end
 
   def menu

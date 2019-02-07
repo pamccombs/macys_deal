@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-#puts "Hello World"
-
 require "bundler/setup"
 require "macys_deal"
 
