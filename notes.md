@@ -51,3 +51,18 @@ correct --> title = doc.search('h2.promo-header-text').map(&:text)
 working --> url = doc.at('div.promo-footer').search('a').first.attr('href')
 
 better --> url = doc.search('div.promo-footer').search('a').map {|attrs| attrs.attr("href")}
+
+
+testing
+
+frowns = ["1", nil, "#", "2", "#", nil, "3"]
+
+good = []
+
+frowns.each do |frown|
+  if frown == nil || frown == "#"
+  next
+  else
+  good << frown
+  end
+end
