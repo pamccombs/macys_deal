@@ -18,12 +18,16 @@ attr_accessor :name, :price, :promo_t, :url
   def self.scrape_macys
     doc = Nokogiri::HTML(open("https://www.macys.com/shop/coupons-deals?cm_sp=navigation-_-top_nav-_-deals&lid=glbtopnav_deals-us")) do |config|
       config.strict.noblanks
+
+
     end
+
 
 
     deal = self.new
     good_url = []
     deal.name = doc.search('h2.promo-header-text').map(&:text)
+    #binding.pry
       #puts "#{i}. #{s_name}"
     deal.price = doc.search('h2.promo-sub-header-text').map(&:text)
         #puts "#{i}. #{s_price}"

@@ -15,8 +15,12 @@ class MacysDeal::CLI
 
     @deals = MacysDeal::Deal.today
     @deals.map.with_index() do |deal, i|
-      #while i >= 0
+      i == 0
+      until i == 15
       puts "#{i+1}. #{deal.name[i]} - #{deal.price[i]} - #{deal.promo_t[i]}"
+      i+=1
+      break if i == 15
+      end
     end
   end
 
@@ -35,6 +39,7 @@ class MacysDeal::CLI
       else
         puts "Incorrect input."
         list_deals
+        #binding.pry
       end
     end
   end
