@@ -24,8 +24,15 @@ attr_accessor :name, :price, :promo_t, :url
     deal = self.new
     good_url = []
     deal.name = doc.search('h2.promo-header-text').map(&:text)
+      #puts "#{i}. #{s_name}"
     deal.price = doc.search('h2.promo-sub-header-text').map(&:text)
+        #puts "#{i}. #{s_price}"
     deal.promo_t = doc.search('div.promo-code').map(&:text)
+          #puts "#{i}. #{s_promo_t}"
+
+        #puts "#{i}. #{s_name} - #{s_price} - #{s_promo_t}"
+
+
     deal.url = doc.search('div.promo-footer').search('a').each do |attrs|
       if attrs.attr("href") == nil || attrs.attr("href") == "#"
       next

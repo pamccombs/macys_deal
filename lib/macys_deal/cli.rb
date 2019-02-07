@@ -14,8 +14,9 @@ class MacysDeal::CLI
 
 
     @deals = MacysDeal::Deal.today
-    @deals.each.with_index(1) do |deal, i|
-      puts "#{i}. #{deal.name}"  #{deal.price} - #{deal.promo_t}"
+    @deals.map.with_index() do |deal, i|
+      #while i >= 0
+      puts "#{i+1}. #{deal.name[i]} - #{deal.price[i]} - #{deal.promo_t[i]}"
     end
   end
 
@@ -28,7 +29,7 @@ class MacysDeal::CLI
 
       if input.to_i > 0
         the_deal = @deals[input.to_i-1]
-        puts "#{the_deal.name} - #{the_deal.price} - #{the_deal.promo}"
+        puts "#{the_deal.name[input.to_i-1]} - #{the_deal.price[input.to_i-1]} - #{the_deal.promo_t[input.to_i-1]}"
       elsif input == "list"
         list_deals
       else
