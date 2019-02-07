@@ -52,6 +52,14 @@ working --> url = doc.at('div.promo-footer').search('a').first.attr('href')
 
 better --> url = doc.search('div.promo-footer').search('a').map {|attrs| attrs.attr("href")}
 
+good --> url = doc.search('div.promo-footer').search('a').each do |attrs|
+  if attrs.attr("href") == nil || attrs.attr("href") == "#"
+  next
+  else
+  good_url << attrs.attr("href")
+  end
+  end
+
 
 testing
 
