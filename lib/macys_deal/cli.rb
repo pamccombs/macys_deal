@@ -29,7 +29,7 @@ class MacysDeal::CLI
       puts "Enter the number(#) for the deal you are interested in or type list to see deals or type exit:"
       input = gets.strip.downcase
 
-      if input.to_i > 0
+      if input.to_i > 0 && input.to_i <= @deals2.length
         the_deal = @deals2[input.to_i-1]
         puts "#{the_deal.name[input.to_i-1]} - #{the_deal.price[input.to_i-1]} - #{the_deal.promo_t[input.to_i-1]}"
         puts "You can find this deal here! - #{the_deal.url[0][input.to_i-1]}"
