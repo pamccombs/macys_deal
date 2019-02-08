@@ -35,6 +35,9 @@ class MacysDeal::CLI
         puts "You can find this deal here! - #{the_deal.url[0][input.to_i-1]}"
       elsif input == "list"
         list_deals
+      elsif
+        input == "exit"
+        break
       else
         puts "Incorrect input."
         list_deals
