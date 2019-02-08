@@ -17,11 +17,11 @@ class MacysDeal::CLI
     @deals2 = []
     @deals.map.with_index() do |deal, i|
       i == 0
-      until i == 15
+      until i == deal.name.length
         @deals2 << deal
       puts "#{i+1}. #{deal.name[i]} - #{deal.price[i]} - #{deal.promo_t[i]}"
       i+=1
-      break if i == 15
+      break if i == 25
       end
     end
   end
@@ -36,6 +36,7 @@ class MacysDeal::CLI
       if input.to_i > 0
         the_deal = @deals2[input.to_i-1]
         puts "#{the_deal.name[input.to_i-1]} - #{the_deal.price[input.to_i-1]} - #{the_deal.promo_t[input.to_i-1]}"
+        puts "You can find this deal here! - #{the_deal.url[0][input.to_i-1]}"
         #binding.pry
       elsif input == "list"
         list_deals

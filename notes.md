@@ -74,3 +74,18 @@ frowns.each do |frown|
   good << frown
   end
 end
+
+
+testing 2
+
+@good_url = []
+    deal.url = doc.search('div.promo-footer').search('a').each do |attrs|
+      if attrs.attr("href") == nil || attrs.attr("href") == "#"
+      next
+      else
+      @good_url << attrs.attr("href")
+      end
+      @good_url
+      #binding.pry
+    end
+    deal
