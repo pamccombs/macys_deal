@@ -1,0 +1,3 @@
+class MacysDeal::Scraper
+
+end
