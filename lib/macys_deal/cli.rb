@@ -13,11 +13,11 @@ class MacysDeal::CLI
     @deals2 = []
     @deals.map.with_index() do |deal, i|
       i == 0
-      until i == deal.name.length
+      until i == deal.price.length
         @deals2 << deal
       puts "#{i+1}. #{deal.name[i]} - #{deal.price[i]} - #{deal.promo_t[i]}"
       i+=1
-      break if i == 25
+      break if i == 100
       end
     end
   end
