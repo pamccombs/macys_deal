@@ -1,5 +1,7 @@
 class MacysDeal::Deal
 
+  attr_accessor :name, :price, :promo_t, :url
+
   def self.today
     self.scrape_deals
   end
