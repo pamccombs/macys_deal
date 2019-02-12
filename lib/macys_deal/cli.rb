@@ -4,7 +4,7 @@ class MacysDeal::CLI
   def call
     list_deals
     menu
-    goodbye
+    #goodbye
   end
 
   def list_deals
@@ -38,6 +38,7 @@ class MacysDeal::CLI
         list_deals
       elsif
         input == "exit"
+        puts "Thank you for your support! Check daily for more deals!"
         break
       else
         puts "Incorrect input."
@@ -46,7 +47,9 @@ class MacysDeal::CLI
     end
   end
 
-  def goodbye
-    puts "Thank you for your support! Check daily for more deals!"
-  end
+#inefficient method #goodbye
+
+  #def goodbye
+  #  puts "Thank you for your support! Check daily for more deals!"
+  #end
 end
