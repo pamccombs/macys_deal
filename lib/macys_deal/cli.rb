@@ -9,7 +9,8 @@ class MacysDeal::CLI
 
   def list_deals
     puts "Macy's Deals:"
-    @deals = MacysDeal::Deal.today
+    #replaced #.today with #.scrape_deals
+    @deals = MacysDeal::Deal.scrape_deals
     @deals2 = []
     @deals.map.with_index() do |deal, i|
       i == 0
