@@ -1,16 +1,10 @@
 class MacysDeal::Deal
 
   attr_accessor :name, :price, :promo_t, :url
-
-#inefficient  - should just be self.scrape_deals
-
-  #def self.today
-    #self.scrape_deals
-  #end
-
+  @@all = []
   def self.scrape_deals
-    deals = []
-    deals << MacysDeal::Scraper.scrape_macys
-    deals
+    @@all << MacysDeal::Scraper.scrape_macys
+    @@all
+    #binding.pry
   end
 end

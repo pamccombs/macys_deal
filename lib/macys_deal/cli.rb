@@ -4,12 +4,10 @@ class MacysDeal::CLI
   def call
     list_deals
     menu
-    #goodbye
   end
 
   def list_deals
     puts "Macy's Deals:"
-    #replaced #.today with #.scrape_deals
     @deals = MacysDeal::Deal.scrape_deals
     @deals2 = []
     @deals.map.with_index() do |deal, i|
@@ -46,10 +44,4 @@ class MacysDeal::CLI
       end
     end
   end
-
-#inefficient method #goodbye
-
-  #def goodbye
-  #  puts "Thank you for your support! Check daily for more deals!"
-  #end
 end
