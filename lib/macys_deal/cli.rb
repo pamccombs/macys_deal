@@ -8,12 +8,11 @@ class MacysDeal::CLI
 
   def list_deals
     puts "Macy's Deals:"
-    @deals = MacysDeal::Deal.scrape_deals
+    @@all = MacysDeal::Deal.scrape_deals
     @deals2 = []
-    @deals.map.with_index() do |deal, i|
+    @@all.map.with_index() do |deal, i|
       i == 0
-      until i == deal.price.length
-        @deals2 << deal
+      until i == @@all.price.length
       puts "#{i+1}. #{deal.name[i]} - #{deal.price[i]} - #{deal.promo_t[i]}"
       i+=1
       break if i == 100
