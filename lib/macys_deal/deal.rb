@@ -7,4 +7,20 @@ class MacysDeal::Deal
     @@all
     #binding.pry
   end
+  
+  def name
+    @name = []
+  end
+  
+  def price
+    @price = []
+  end
+  
+  def promo_t
+    @promo_t = []
+  end
+  
+  def url
+    @url = []
+  end
 end
