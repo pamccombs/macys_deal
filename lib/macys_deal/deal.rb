@@ -3,12 +3,14 @@ class MacysDeal::Deal
   attr_accessor :name, :price, :promo_t, :url
   @@all = []
   def self.scrape_deals
+    @deal_filter = []
     @deal_filter << MacysDeal::Scraper.scrape_macys
     @deal_filter
-    #binding.pry
+    binding.pry
   end
   
   def self.organize
+    @deal_filter
     #I need name[x], price[x], promo_t[x] to be stored as deal[x]
     
   end

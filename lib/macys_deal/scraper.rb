@@ -13,6 +13,5 @@ class MacysDeal::Scraper
     deal.url = url = doc.search('div.promo-footer').search('a').map {|attrs| attrs.attr("href")} 
     
     deal
-    binding.pry
   end
 end
