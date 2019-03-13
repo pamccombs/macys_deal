@@ -9,3 +9,4 @@ bundle install
 
 gem install bundler:2.0.1
 cd macys_deal
+./bin/macys-deal
