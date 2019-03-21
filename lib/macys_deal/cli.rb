@@ -8,9 +8,8 @@ class MacysDeal::CLI
 
   def list_deals
     puts "Macy's Deals:"
-    @@all = MacysDeal::Deal.scrape_deals
-    @deals2 = []
-    @@all.map.with_index() do |deal, i|
+    MacysDeal::Scraper.scrape_macys
+    MacysDeal::Deal.all.map.with_index() do |deal, i|
       i == 0
       until i == @@all.price.length
       puts "#{i+1}. #{deal.name[i]} - #{deal.price[i]} - #{deal.promo_t[i]}"
@@ -27,8 +26,8 @@ class MacysDeal::CLI
       puts "Enter the number(#) for the deal you are interested in or type list to see deals or type exit:"
       input = gets.strip.downcase
 
-      if input.to_i > 0 && input.to_i <= @deals2.length
-        the_deal = @deals2[input.to_i-1]
+      if input.to_i > 0 && input.to_i <= MacysDeal::Deal.all.length
+        the_deal = MacysDeal::Deal.all[input.to_i-1]
         puts "#{the_deal.name[input.to_i-1]} - #{the_deal.price[input.to_i-1]} - #{the_deal.promo_t[input.to_i-1]}"
         puts "You can find this deal here! - #{the_deal.url[0][input.to_i-1]}"
       elsif input == "list"

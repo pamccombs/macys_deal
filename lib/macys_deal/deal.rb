@@ -1,19 +1,16 @@
 class MacysDeal::Deal
 
-  attr_accessor :name, :price, :promo_t, :url
+  attr_accessor :name, :price, :url
   @@all = []
-  def self.scrape_deals
-    @deal_filter = []
-    @deal_filter << MacysDeal::Scraper.scrape_macys
-    @deal_filter
-    binding.pry
+  
+  def initialize
+    @@all << self
   end
   
-  def self.organize
-    @deal_filter
-    #I need name[x], price[x], promo_t[x] to be stored as deal[x]
-    
+  def self.all
+    @@all
   end
+  
   
   #def organize_url
   #  deal.url = doc.search('div.promo-footer').search('a').map do |attrs|
