@@ -1,4 +1,3 @@
-#CLI Controller
 class MacysDeal::CLI
 
   def call
@@ -8,19 +7,17 @@ class MacysDeal::CLI
   end
 
   def list_deals
-    puts "Brad's Deals:"
+    puts "\n", "Brad's Deals:", "\n"
     MacysDeal::Deal.all.map.with_index() do |deal, i|
       puts "#{i+1}. #{deal.name}"
     end
   end
 
   def menu
-
     input = nil
     while input != "exit"
       puts "\nEnter the number(#) for the deal you are interested in or type list to see deals or type exit:"
       input = gets.strip.downcase
-
       if input.to_i > 0 && input.to_i <= MacysDeal::Deal.all.length
         the_deal = MacysDeal::Deal.all[input.to_i-1]
         puts "\n#{the_deal.name}"
@@ -34,10 +31,7 @@ class MacysDeal::CLI
       else
         puts "Incorrect input."
         list_deals
-        
       end
-      
     end
   end
-  
 end
