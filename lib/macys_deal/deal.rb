@@ -9,6 +9,5 @@ class MacysDeal::Deal
   
   def self.all
     @@all
-     binding.pry
   end
 end

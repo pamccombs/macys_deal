@@ -9,10 +9,9 @@ class MacysDeal::Scraper
     deals = doc.search('a.tile-quoted.clearfix')
     
     deals.each do |div|
-      @deal = MacysDeal::Deal.new
-      @deal.name = div.search('div.deal-title').text.delete!("\n")
-      @deal.url = url + div.attributes['href'].value
+      deal = MacysDeal::Deal.new
+      deal.name = div.search('div.deal-title').text.delete!("\n+*")
+      deal.url = url + div.attributes['href'].value
     end
   end
-  @deal
 end
