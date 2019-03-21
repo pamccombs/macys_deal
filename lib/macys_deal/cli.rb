@@ -2,13 +2,13 @@
 class MacysDeal::CLI
 
   def call
+    MacysDeal::Scraper.scrape_macys
     list_deals
     menu
   end
 
   def list_deals
     puts "Brad's Deals:"
-    MacysDeal::Scraper.scrape_macys
     MacysDeal::Deal.all.map.with_index() do |deal, i|
       puts "#{i+1}. #{deal.name}"
     end
@@ -34,7 +34,10 @@ class MacysDeal::CLI
       else
         puts "Incorrect input."
         list_deals
+        
       end
+      
     end
   end
+  
 end
