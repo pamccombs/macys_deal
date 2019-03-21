@@ -1,6 +1,6 @@
 class MacysDeal::Deal
 
-  attr_accessor :name, :price, :url
+  attr_accessor :name, :url
   @@all = []
   
   def initialize
@@ -9,17 +9,6 @@ class MacysDeal::Deal
   
   def self.all
     @@all
+     binding.pry
   end
-  
-  
-  #def organize_url
-  #  deal.url = doc.search('div.promo-footer').search('a').map do |attrs|
-  #    if attrs.attr("href") == nil || attrs.attr("href") == "#"
-  #      next
-  #      else
-  #      @url << attrs.attr("href")
-  #    end
-  #    @url
-  #  end
-  #end
 end
