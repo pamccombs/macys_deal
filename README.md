@@ -1,6 +1,6 @@
 # MacysDeal
 
-Welcome to MacysDeal! This gem will help you find today's Macy's Deals.
+Welcome to MacysDeal! This gem will help you find today's Brad's deals.
 
 ## Installation
 
